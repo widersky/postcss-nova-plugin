@@ -1,0 +1,8 @@
+{
+    "identifier": "eu.devbuzz.PostCSSSyntax",
+    "name": "PostCSS Syntax",
+    "organization": "DevBuzz",
+    "description": "Basic syntax highlighting for PostCSS.",
+    "version": "0.1.0",
+    "categories": ["languages"]
+}
