@@ -4,5 +4,7 @@
     "organization": "DevBuzz",
     "description": "Basic syntax highlighting for PostCSS.",
     "version": "0.1.0",
-    "categories": ["languages"]
+    "categories": ["languages"],
+    "repository": "https://github.com/widersky/postcss-nova-plugin",
+    "bugs": "https://github.com/widersky/postcss-nova-plugin/issues"
 }
