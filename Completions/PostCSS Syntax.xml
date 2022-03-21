@@ -1,17 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <completions>
-    <provider>
-        <selector>postcss</selector>
-        <expression>\b[a-zA-Z0-9-_]*</expression>
-        <set>postcss.entities</set>
+
+    <!-- At rules provider -->
+    <provider name="at-rules">
+        <syntax>postcss</syntax>
+        <selector>*:not(comment, style.value)</selector>
+        <expression>@[a-zA-Z0-9-]*</expression>
+        
+        <set>postcss.at-rules</set>
     </provider>
     
-    <!-- Entities -->
-    <set name="postcss.entities">
-        <completion string="&quot;" />
-        <completion string="&amp;" />
-        <completion string="&apos;" />
-        <completion string="&lt;" />
-        <completion string="&gt;" />
+    <!-- Attributes -->
+    <provider name="attributes-empty">
+        <syntax>postcss</syntax>
+        <selector>style.attribute-list</selector>
+        <expression>(?&lt;![@$#.:,\[\]\{\}\(\)\w])</expression>
+        
+        <set>css.properties</set>
+    </provider>
+    <provider name="attributes">
+        <syntax>postcss</syntax>
+        <selector>style.selector, style.attribute.name</selector>
+        <expression>(?&lt;![@$#.:,\[\]\{\}\(\)])(\b[a-zA-Z0-9-]+|-+[a-zA-Z0-9-]*)</expression>
+        
+        <set>css.properties</set>
+    </provider>
+    
+    <!-- At rules -->
+    <set name="postcss.at-rules" symbol="statement">
+        <completion string="@tailwind" />
+        <completion string="@apply" />
     </set>
+
 </completions>

@@ -59,8 +59,6 @@
     
     <scopes>
         <include syntax="css" collection="comments" />
-        <include syntax="self" collection="interpolations" />
-        <include syntax="self" collection="variable-definitions" />
         <include syntax="self" collection="at-rules" />
         <include syntax="self" collection="rules" />
         
@@ -113,6 +111,7 @@
                 </subscopes>
             </scope>
             
+            <!-- Other PostCSS directives -->
             <scope name="postcss.style.at-rule.apply">
                 <symbol type="style-directive">
                     <context behavior="subtree" foldable="false" />
@@ -127,7 +126,6 @@
                 </ends-with>
             </scope>
             
-            <!-- Other PostCSS directives -->
             <scope name="postcss.style.at-rule">
                 <symbol type="style-directive">
                     <context behavior="subtree" foldable="false" />
@@ -188,7 +186,6 @@
         <!-- Selector Components -->
         <collection name="selector-components">
             <include syntax="css" collection="comments" />
-            <include syntax="self" collection="interpolations" />
             <include syntax="css" collection="pseudoelements" />
             <include syntax="css" collection="simple-selectors" />
             <scope name="postcss.style.selector.operator">
@@ -223,80 +220,13 @@
         </collection>
         
         <!-- Values -->
-        <collection name="values" override="true">
-            <!-- Keywords -->
-            <scope name="postcss.style.value.keyword.default">
-                <expression>!default</expression>
-            </scope>
-            
-            <!-- Identifiers -->
-            <include syntax="self" collection="variables" />
-            
+        <collection name="values" override="true">            
             <!-- CSS Values -->
             <include syntax="css" collection="values" />
-            
-            <!-- Functions -->
-            <scope name="postcss.style.value.function">
-                <starts-with>
-                    <expression>\b([a-zA-Z-][a-zA-ZÀ-ÖØ-öø-ÿŸřŘšŠžŽ0-9-_]*)(\()</expression>
-                    <capture number="1" name="postcss.style.value.function.name" />
-                    <capture number="2" name="postcss.style.value.function.bracket" />
-                </starts-with>
-                <ends-with>
-                    <expression>(\))</expression>
-                    <capture number="1" name="postcss.style.value.function.bracket" />
-                </ends-with>
-                <subscopes>
-                    <include syntax="self" collection="values" />
-                </subscopes>
-            </scope>
             
             <!-- Operators -->
             <scope name="postcss.style.operator">
                 <expression>(-|\+|\*|\/|%|!=|==|&lt;=|&lt;|&gt;=|&gt;|\band\b|\bor\b|\bnot\b)</expression>
-            </scope>
-        </collection>
-        
-        <!-- Variables -->
-        <collection name="variables">
-            <scope name="postcss.style.value.identifier.variable">
-                <expression>\$[a-zA-ZÀ-ÖØ-öø-ÿŸřŘšŠžŽ0-9-_]+</expression>
-            </scope>
-        </collection>
-        
-        <!-- Variable Definitions -->
-        <collection name="variable-definitions">
-            <scope name="postcss.style.variable-definition">
-                <symbol type="variable" scope="local" />
-                <starts-with>
-                    <expression>(\$[a-zA-ZÀ-ÖØ-öø-ÿŸřŘšŠžŽ0-9-_]+)\s*(:)</expression>
-                    <capture number="1" name="postcss.style.variable-definition.identifier.variable.name" />
-                    <capture number="2" name="postcss.style.variable-definition.separator" />
-                </starts-with>
-                <ends-with>
-                    <expression>;</expression>
-                </ends-with>
-                <subscopes>
-                    <cut-off>
-                        <expression>(?=\}|\))</expression>
-                    </cut-off>
-                    <include syntax="css" collection="comments" />
-                    <scope name="postcss.style.variable-definition.value">
-                        <starts-with>
-                            <expression>(?&lt;=:)</expression>
-                        </starts-with>
-                        <ends-with>
-                            <expression>(?=;)</expression>
-                        </ends-with>
-                        <subscopes>
-                            <cut-off>
-                                <expression>(?=\}|\))</expression>
-                            </cut-off>
-                            <include syntax="self" collection="lists" />
-                            <include syntax="self" collection="values" />
-                        </subscopes>
-                    </scope>
-                </subscopes>
             </scope>
         </collection>
         
@@ -316,11 +246,9 @@
                 </ends-with>
                 <subscopes>
                     <include syntax="css" collection="comments" />
-                    <include syntax="self" collection="variable-definitions" />
                     <include syntax="self" collection="at-rules" />
                     <include syntax="self" collection="attributes" />
                     <include syntax="self" collection="rules" />
-                    <include syntax="self" collection="interpolations" />
                 </subscopes>
             </scope>
         </collection>
