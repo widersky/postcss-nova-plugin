@@ -1,3 +1,7 @@
+## Version 0.2.1
+
+* Refreshed extension icon to achieve consistent look between every my extensions
+
 ## Version 0.2.0
 
 * Fixed bug that prevented CSS attributes from displaying as autocomplete values
