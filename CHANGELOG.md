@@ -1,3 +1,7 @@
+## Version 0.3.0
+
+* Added colors selector into syntax
+
 ## Version 0.2.1
 
 * Refreshed extension icon to achieve consistent look between every my extensions
