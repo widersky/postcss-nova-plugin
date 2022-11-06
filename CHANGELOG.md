@@ -1,3 +1,7 @@
+## Version 0.3.1
+
+* Fixed fast commenting by keybinding issue
+
 ## Version 0.3.0
 
 * Added colors selector into syntax

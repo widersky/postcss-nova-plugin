@@ -3,7 +3,7 @@
     "name": "PostCSS Syntax",
     "organization": "DevBuzz",
     "description": "Basic syntax highlighting for PostCSS.",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "categories": ["languages"],
     "main": "main.js",
     "repository": "https://github.com/widersky/postcss-nova-plugin",

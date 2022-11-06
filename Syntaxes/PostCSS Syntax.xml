@@ -36,7 +36,12 @@
             </ends-with>
         </multiline>
         <single>
-            <expression>//</expression>
+            <starts-with>
+                <expression>/*</expression>
+            </starts-with>
+            <ends-with>
+                <expression>*/</expression>
+            </ends-with>
         </single>
     </comments>
     
