@@ -1,0 +1,14 @@
+@import "tailwindcss/components";
+
+.test {
+  width: 50px;
+  color: aqua;
+  background-color: #fff;
+  
+  @apply overflow-hidden;
+}
+
+/* Testing comments */
+.test2 {
+  width: 10rem;
+}

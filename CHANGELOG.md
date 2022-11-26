@@ -1,3 +1,22 @@
+<style>
+	table { width: 100%; }
+	table td { vertical-align: top }
+	table td:first-of-type { width: 25% }
+</style>
+
+## Version 1.0.0
+
+| Release date | 26.11.2022 |
+| --- | ---: |
+| Important note | Regex-based CSS declarations will be removed from PostCSS plugin as **Panic plans to remove them from Nova soon** too |
+
+### What's new:
+
+* **Nova 10.x & up:** Added tree-sitter (Post)CSS declarations
+* Adjusted `@apply`, `@import` and `@tailwind` at-rules to tree-sitter
+* Cleaned-up codebase
+* Fixed #2
+
 ## Version 0.3.1
 
 * Fixed fast commenting by keybinding issue

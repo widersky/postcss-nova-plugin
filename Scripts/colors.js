@@ -149,7 +149,7 @@ let namedColorStrings = {
     rebeccapurple: "663399"
 };
 
-class CSSColorAssistant {
+class PostCSSColorAssistant {
     constructor() {
         // Parsing charsets
         this.attributeBlockChars = new Charset("\\/{");
@@ -639,4 +639,4 @@ class CSSColorAssistant {
     }
 }
 
-module.exports = new CSSColorAssistant();
+module.exports = new PostCSSColorAssistant();

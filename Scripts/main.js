@@ -1,3 +1,3 @@
-// Colors
-const Colors = require("colors.js");
+const Colors = require("Colors.js");
+
 nova.assistants.registerColorAssistant(["postcss"], Colors);

@@ -1,4 +1,4 @@
-# PostCSS Syntax highlighting
+# PostCSS Syntax highlighting (based on tree-sitter now)
 
 <img src="https://raw.githubusercontent.com/widersky/postcss-nova-plugin/main/Images/screenshot.png" alt="PostCSS for Nova" />
 

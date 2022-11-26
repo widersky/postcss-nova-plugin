@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<completions>
+	<!-- At-Rules -->
+	<provider name="at-rules">
+		<syntax>postcss</syntax>
+		<selector>*:not(comment, style.value)</selector>
+		<expression>@[a-zA-Z0-9-]*</expression>
+		
+		<set>css.at-rules</set>
+		<set>postcss.at-rules</set>
+	</provider>
+	
+	<!-- Attributes -->
+	<provider name="attributes">
+		<syntax>postcss</syntax>
+		<selector>*:not(comment, style.value)</selector>
+		<expression>(?&lt;![@$.:,\[\]\(\)\{\}])[a-zA-Z0-9-]*</expression>
+		
+		<set>css.properties</set>
+	</provider>
+	
+	<!-- Property-specific Attribute -->
+	<provider name="values">
+		<syntax>postcss</syntax>
+		<selector>style.attribute:has-child(style.attribute.name:capture(property)) style.value</selector>
+		<expression>(?&lt;!\!)(\b|-|\!)[a-zA-Z0-9-]*</expression>
+		
+		<set>css.values.all</set>
+		<set>css.values.${property}</set>
+	</provider>
+	<provider name="values.empty">
+		<syntax>postcss</syntax>
+		<selector>style.attribute:has-child(style.attribute.name:capture(property)) style.value</selector>
+		<expression capture="1">(?&lt;=:)\s*($)</expression>
+		
+		<set>css.values.all</set>
+		<set>css.values.${property}</set>
+	</provider>
+	
+	<!-- Variables -->
+	<provider name="variables">
+		<syntax>postcss</syntax>
+		<selector>style.value:not(string, comment)</selector>
+		<expression>(\$[a-zA-Z_][a-zA-Z0-9_\-]*)|(\b[a-zA-Z_][a-zA-Z0-9_\-]*)</expression>
+		
+		<symbols type="variable,constant,argument" syntax="postcss" />
+	</provider>
+	
+	<!-- At Rules -->
+	<set name="postcss.at-rules" symbol="statement">
+		<completion string="@tailwind" />
+		<completion string="@apply" />
+		<completion string="@import" />
+	</set>
+</completions>
