@@ -1,10 +1,13 @@
 ## Version 1.0.0
 
-Release date: `26.11.2022`
+📅 `26.11.2022`
 
-### What's new:
+#### ✨ What's new:
 
 * **Nova 10.x & up:** Added tree-sitter (Post)CSS declarations
+
+#### 🔧 What's fixed:
+
 * Adjusted `@apply`, `@import` and `@tailwind` at-rules to tree-sitter
 * Cleaned-up codebase
 * Fixed #2
