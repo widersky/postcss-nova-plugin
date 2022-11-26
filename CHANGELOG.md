@@ -10,7 +10,7 @@
 
 * Adjusted `@apply`, `@import` and `@tailwind` at-rules to tree-sitter
 * Cleaned-up codebase
-* Fixed #2
+* Fixed [#2](https://github.com/widersky/postcss-nova-plugin/issues/2)
 
 ## Version 0.3.1
 
