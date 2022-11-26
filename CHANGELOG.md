@@ -1,13 +1,7 @@
-<style>
-	table { width: 100%; }
-	table td { vertical-align: top }
-	table td:first-of-type { width: 25% }
-</style>
-
 ## Version 1.0.0
 
-| Release date | 26.11.2022 |
-| --- | ---: |
+| Release date   | 26.11.2022 |
+| -------------- | --- |
 | Important note | Regex-based CSS declarations will be removed from PostCSS plugin as **Panic plans to remove them from Nova soon** too |
 
 ### What's new:
