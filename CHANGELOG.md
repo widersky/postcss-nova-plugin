@@ -1,8 +1,7 @@
 ## Version 1.0.0
 
-| Release date   | 26.11.2022 |
-| -------------- | --- |
-| Important note | Regex-based CSS declarations will be removed from PostCSS plugin as **Panic plans to remove them from Nova soon** too |
+Release date: `26.11.2022`\
+Important note: Regex-based CSS declarations will be removed from PostCSS plugin as **Panic plans to remove them from Nova soon** too!
 
 ### What's new:
 
