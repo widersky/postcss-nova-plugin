@@ -1,3 +1,24 @@
+## Version 1.1.0
+
+📅 `09.12.2022`
+
+#### ✨ What's new:
+
+* Added LESS and SASS to supported types of files
+* Better highlighting for `at` rules, like `@import`, `@apply`...
+
+### 🔀 What's changed:
+
+* Bumped minimum Nova version to 10
+* Made syntax definitions a lot smaller
+* Updated extension screenshot in readme
+* Some cleaning here and there
+
+#### 🔧 What's fixed:
+
+* Fixed [#3](https://github.com/widersky/postcss-nova-plugin/issues/3) (Repeating auto-complete options when enabled bug)
+* Fixed [#4](https://github.com/widersky/postcss-nova-plugin/issues/4) (No longer seeing "PostCSS" as a syntax option)
+
 ## Version 1.0.0
 
 📅 `26.11.2022`

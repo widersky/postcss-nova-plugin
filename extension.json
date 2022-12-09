@@ -2,10 +2,10 @@
     "identifier": "eu.devbuzz.PostCSSSyntax",
     "name": "PostCSS Syntax",
     "organization": "DevBuzz",
-    "author": "DevBuzz",
     "description": "Basic tree-sitter based syntax highlighting for PostCSS.",
-    "version": "1.0.0",
-    "categories": ["languages"],
+    "version": "1.1.0",
+    "min_runtime": "10.0",
+    "categories": ["languages", "completions"],
     "main": "main.js",
     "repository": "https://github.com/widersky/postcss-nova-plugin",
     "bugs": "https://github.com/widersky/postcss-nova-plugin/issues",
@@ -16,8 +16,8 @@
         "onLanguage:css",
         "onLanguage:scss",
         "onLanguage:sass",
-        "onLanguage:less",
-        "onLanguage:html",
-        "onLanguage:php"
+        "onLanguage:postcss",
+        "onLanguage:pcss",
+        "onLanguage:less"
     ]
 }

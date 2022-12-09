@@ -1,14 +1,27 @@
-@import "tailwindcss/components";
+@tailwind components;
+@tailwind base;
+@tailwind utilities;
+@import "something/else";
+
+@layer test {
+  .test {
+    @apply antialiased;
+  }
+}
 
 .test {
   width: 50px;
   color: aqua;
   background-color: #fff;
   
-  @apply overflow-hidden;
+  @apply overflow-hidden mt-8 mb-0 font-[10px];
 }
 
 /* Testing comments */
 .test2 {
   width: 10rem;
+}
+
+#identifier {
+  width: 200px;
 }

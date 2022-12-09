@@ -51,5 +51,6 @@
 		<completion string="@tailwind" />
 		<completion string="@apply" />
 		<completion string="@import" />
+		<completion string="@layer" />
 	</set>
 </completions>
